@@ -28,5 +28,6 @@ class Activity_Result : AppCompatActivity() {
             )
             finish()
         }
+        binding.tvResultText.text = intent.getStringExtra("Message")
     }
 }

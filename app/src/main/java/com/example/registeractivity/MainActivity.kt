@@ -23,7 +23,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
         binding.btnSendText.setOnClickListener {
-            val intent = Intent(this@MainActivity, Activity_Result::class.java)
+            val input = binding.etInputText.text.toString()
+            val intent = Intent(this,Activity_Result::class.java)
+            intent.putExtra("Message",input)
             launcherData.launch(intent)
         }
     }
